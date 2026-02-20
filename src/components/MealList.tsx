@@ -1,17 +1,16 @@
 import { Colors } from '@/src/constants/colors';
 import { Meal } from '@/src/types';
+import { memo } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 interface MealListProps {
   meals: Meal[];
 }
 
-export default function MealList({ meals }: MealListProps) {
-  const activeMeals = meals.filter(meal => meal.isActive);
-
+function MealList({ meals }: MealListProps) {
   return (
     <ScrollView style={styles.mealList} showsVerticalScrollIndicator={false}>
-      {activeMeals.map((meal) => (
+      {meals.map((meal) => (
         <View key={meal.id} style={styles.mealCard}>
           <View style={styles.mealCardHeader}>
             <Text style={styles.mealName}>{meal.name}</Text>
@@ -119,3 +118,5 @@ const styles = StyleSheet.create({
     color: '#856404',
   },
 });
+
+export default memo(MealList);

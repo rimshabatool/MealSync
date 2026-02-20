@@ -1,12 +1,13 @@
 import { Colors } from '@/src/constants/colors';
 import { Meal } from '@/src/types';
+import { memo } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 interface SuggestedForYouProps {
   suggestedMeals: Meal[];
 }
 
-export default function SuggestedForYou({ suggestedMeals }: SuggestedForYouProps) {
+function SuggestedForYou({ suggestedMeals }: SuggestedForYouProps) {
   return (
     <View style={styles.suggestedSection}>
       <Text style={styles.suggestedTitle}>Suggested for You</Text>
@@ -71,3 +72,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 });
+
+export default memo(SuggestedForYou);

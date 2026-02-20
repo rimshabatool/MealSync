@@ -1,5 +1,6 @@
 import { Colors } from '@/src/constants/colors';
 import childrenData from '@/src/mock-data/children.json';
+import { memo } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface ChildSelectorProps {
@@ -7,22 +8,25 @@ interface ChildSelectorProps {
   onSelectChild: (childName: string) => void;
 }
 
-export default function ChildSelector({ selectedChildName, onSelectChild }: ChildSelectorProps) {
+function ChildSelector({ selectedChildName, onSelectChild }: ChildSelectorProps) {
   return (
     <View style={styles.childSelector}>
       <Text style={styles.childSelectorLabel}>Select Child:</Text>
       <View style={styles.childButtons}>
-        {childrenData.map((child) => (
-          <TouchableOpacity 
-            key={child.id}
-            style={[styles.childButton, selectedChildName === child.name && styles.childButtonActive]}
-            onPress={() => onSelectChild(child.name)}
-          >
-            <Text style={[styles.childButtonText, selectedChildName === child.name && styles.childButtonTextActive]}>
-              {child.name}
-            </Text>
-          </TouchableOpacity>
-        ))}
+        {childrenData.map((child) => {
+          const isSelected = selectedChildName === child.name;
+          return (
+            <TouchableOpacity 
+              key={child.id}
+              style={[styles.childButton, isSelected && styles.childButtonActive]}
+              onPress={() => onSelectChild(child.name)}
+            >
+              <Text style={[styles.childButtonText, isSelected && styles.childButtonTextActive]}>
+                {child.name}
+              </Text>
+            </TouchableOpacity>
+          );
+        })}
       </View>
     </View>
   );
@@ -67,3 +71,5 @@ const styles = StyleSheet.create({
     color: Colors.white,
   },
 });
+
+export default memo(ChildSelector);

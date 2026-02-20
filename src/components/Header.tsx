@@ -1,11 +1,12 @@
 import { Colors } from '@/src/constants/colors';
+import { memo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 interface HeaderProps {
   title: string;
 }
 
-export default function Header({ title }: HeaderProps) {
+function Header({ title }: HeaderProps) {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{title}</Text>
@@ -25,3 +26,5 @@ const styles = StyleSheet.create({
     color: Colors.black,
   },
 });
+
+export default memo(Header);
