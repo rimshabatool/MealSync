@@ -1,5 +1,6 @@
 import ChildSelector from '@/src/components/ChildSelector';
 import Header from '@/src/components/Header';
+import MealList from '@/src/components/MealList';
 import SuggestedForYou from '@/src/components/SuggestedForYou';
 import { Colors } from '@/src/constants/colors';
 import childrenData from '@/src/mock-data/children.json';
@@ -28,6 +29,7 @@ export default function MealMenuScreen() {
         onSelectChild={setSelectedChildName}
       />
       <SuggestedForYou suggestedMeals={suggestedMeals} />
+      <MealList meals={mealsData} />
     </SafeAreaView>
   );
 }

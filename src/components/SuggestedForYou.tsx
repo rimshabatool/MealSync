@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 20,
     marginBottom: 12,
-    color: Colors.navyDark,
+    color: Colors.black,
   },
   suggestedScroll: {
     paddingLeft: 20,
@@ -62,12 +62,12 @@ const styles = StyleSheet.create({
   suggestedMealName: {
     fontSize: 16,
     fontWeight: '600',
-    color: Colors.navyDark,
+    color: Colors.black,
     textAlign: 'center',
   },
   noSuggestions: {
     fontSize: 14,
-    color: Colors.gray,
+    color: Colors.black,
     paddingHorizontal: 20,
   },
 });

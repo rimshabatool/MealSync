@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 5,
-    color: Colors.navyDark,
+    color: Colors.black,
   },
 });

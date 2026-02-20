@@ -5,22 +5,23 @@
 
 export const Colors = {
   // Primary Colors
-  navy: '#1e3a5f',        // Dark navy blue
-  navyDark: '#152d4a',     // Darker navy for headers
-  navyLight: '#2d4f7c',    // Lighter navy for accents
+  navy: '#4a6fa5',        // Lighter navy blue
+  navyDark: '#5a7fb5',     // Lighter navy for headers
+  navyLight: '#6b8fc5',    // Lighter navy for accents
   
   // White & Grays
   white: '#ffffff',
   whiteOff: '#f8f9fa',     // Off-white for backgrounds
   grayLight: '#e9ecef',    // Light gray for borders
-  gray: '#6c757d',         // Gray for text
-  grayDark: '#495057',     // Dark gray for secondary text
+  gray: '#8a9ba8',         // Lighter gray for text
+  grayDark: '#6a7b88',     // Lighter dark gray for secondary text
+  black: '#000000',        // Black for text
   
   // Accents
-  accent: '#3b82f6',       // Blue accent for buttons
-  accentLight: '#60a5fa',  // Lighter blue for hover states
+  accent: '#5b9bf6',       // Lighter blue accent for buttons
+  accentLight: '#b3d4fc',  // Lighter blue for backgrounds
   
   // Status Colors
-  success: '#10b981',       // Green for active/success states
-  successLight: '#d1fae5',  // Light green background
+  success: '#34c759',       // Lighter green for active/success states
+  successLight: '#e8f8ed',  // Lighter green background
 };

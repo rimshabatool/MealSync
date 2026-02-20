@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     marginBottom: 12,
-    color: Colors.navyDark,
+    color: Colors.black,
   },
   childButtons: {
     flexDirection: 'row',
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   childButtonText: {
     fontSize: 16,
     fontWeight: '600',
-    color: Colors.gray,
+    color: Colors.black,
   },
   childButtonTextActive: {
     color: Colors.white,
